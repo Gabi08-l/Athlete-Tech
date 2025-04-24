@@ -55,10 +55,3 @@ Sinta-se livre para contribuir com sugestões, feedbacks ou melhorias. Nosso tim
 
 > Feito com 💙 pela equipe Athlete-Tech
 """
-
-# Salvar como arquivo
-file_path = "/mnt/data/README_Capture_Win.md"
-with open(file_path, "w", encoding="utf-8") as file:
-    file.write(readme_content)
-
-file_path
