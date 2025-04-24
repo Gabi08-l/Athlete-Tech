@@ -1,5 +1,4 @@
 # Athlete-Tech
-# Criar um arquivo README.md com o conteúdo personalizado para o projeto Capture Win
 
 readme_content = """
 # 📊 Capture Win
