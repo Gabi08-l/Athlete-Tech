@@ -22,41 +22,38 @@
         />
       </head>
       <body>
-        <body class="m-0 p-0">
-            <!-- zeramos a margin e o padding para os componentes -->
-            <div id="Inicio" class="bgfundo w-100"></div>
-            <!-- w-100 faz comprimento 100% da tela -->
-        
-            <header class="text-white position-fixed top-0 start-0 end-0 z-3 py-4">
-              <div
-                class="container my-0 d-flex justify-content-between align-items-center my-4"
-              >
-                <nav id="site-navigation" class="d-flex align-items-center gap-4">
-                  <img src="https://placehold.co/211x58" alt="" height="58px" />
-                  <ul id="menu-principal" class="nav">
-                    <li class="nav-item">
-                      <a class="nav-link text-white fw-bold" href="#Inicio">Athlete-Tech</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white fw-bold" href="#Nossa missão"
-                        >Nossa Missão</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white fw-bold" href="#Delivery"
-                        >Delivery</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white fw-bold" href="#Contato">Contato</a>
-                    </li>
-                  </ul>
-                </nav>
-                <div class="d-flex align-items-center gap-3">
-                  <a
-                    href="https://wa.me/551499999999?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!"
-                    target="_blank"
-                    class="nav-link" botao de whatsapp -->
+        <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Quem somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Nossa missão</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                  <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+            <h4 id="scrollspyHeading1">First heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading2">Second heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading3">Third heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading4">Fourth heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading5">Fifth heading</h4>
+            <p>...</p>
+          </div>
     
     
       </body>
