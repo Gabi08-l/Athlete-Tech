@@ -31,11 +31,7 @@ O Capture Win oferece uma plataforma completa com:
 
 ## 💻 Tecnologias Utilizadas
 
-- Front-end: React + Tailwind (Web)
 - Design: Figma
-- Backend: Node.js + MongoDB (ou Firebase)
-- IA: Python + TensorFlow
-- Hospedagem: Vercel ou Netlify
 
 ## 🛠️ Status do Projeto
 
