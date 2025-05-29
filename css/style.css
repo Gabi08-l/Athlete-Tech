@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "inter";
+    src: url(Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "jocker";
+    src: url(Jockey_One/JockeyOne-Regular.ttf);
+}
+
+body {
+    background-color: #B6C5F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color:#003366;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    margin-right: 0.5rem;
+    background-color: C4CDE8;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-family: "inter", sans-serif;
+  ;
+  }
+  
+  .nav-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Logo e slogan */
+  .container.pt-2.mt-2 img {
+    width: 225px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  .container.pt-2.mt-2 h1 {
+    font-size: 2.0rem;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  /* Quem somos */
+  #quem-somos {
+    font-size: rem;
+    line-height: 1.6;
+    font-family: "jocker", sans-serif;
+    text-shadow: #000;
+  }
+  
+  /* Nossa missão */
+  #nossa-missao img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  #nossa-missao h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #003366;
+    font-family: "jocker", sans-serif;
+  }
+  
+  #nossa-missao p {
+    font-size: 3rem;
+    line-height: 1.6;
+    font-family: "jocker", sans-serif;
+  }
+  
+  
+  hr.my-5 {
+    height: 200px;
+    background-color: #333;
+    opacity: 1;
+    border: none;
+  }
+  
+  .bg-white img,
+  .bg-secondary-subtle img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .bg-white img:hover,
+  .bg-secondary-subtle img:hover {
+    transform: scale(1.03);
+  }
+  
+  .container.mt-4 img[alt="logoApp"] {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .container.mt-4 img[alt="logoapp"] {
+    max-width: 100%;
+    height: auto;
+  }
+  
+ 
+  .container.d-flex.flex-column.fs-3 p {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
