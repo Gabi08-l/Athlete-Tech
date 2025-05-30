@@ -55,6 +55,9 @@
               margin-right: 20px;
               align-items: center;
             "
+            data-bs-target="#modalAthlete"
+            data-bs-toggle="offcanvas"
+            aria-controls="modalAthlete"
           >
             Quem Somos
           </button>
@@ -133,6 +136,59 @@
         forma inovadora e inteligente.
       </p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- offCanvas -->
+    <div
+      class="offcanvas offcanvas-start text-bg-light"
+      tabindex="-1"
+      id="modalAthlete"
+      aria-labelledby="modalAthlete"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="modalAthlete">Fundadores</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <h1>ERICK</h1>
+        <h6>Fundador, Designer UI/UX e Especialista Front-End</h6>
+        <p>"Salve! Eu sou o Erick, designer e desenvolvedor front-end. Também jogo vôlei nas horas vagas, então sei bem o valor de ter um sistema intuitivo que ajuda no desempenho. Eu cuido do visual do app/site e da experiência do usuário, pra que tudo seja bonito, rápido e funcional!"</p>
+        <img src="./img/vindo_futuro.png" class="img-fluid d-flex"
+        height="530px"
+        width="530px"
+        style="margin: 20px 0; display: block">
+        
+        <h1>GABI</h1>
+        <h6> Co-fundadora / Especialista em Performance Esportiva</h6>
+        <p>Sou a Gabi, jogadora de basquete e apaixonada por performance! Na Athlete-Tech, cuido da parte de análise de rendimento e como a tecnologia pode ajudar atletas a se superarem. Minha vivência nas quadras me ajuda a entender exatamente o que os atletas precisam.</p>
+        <img src="./img/Gabi.png"class="img-fluid d-flex"
+        height="230px"
+        width="230px"
+        style="margin: 20px 0; display: block">>
+
+        <h1>MAYK</h1>
+        <h6>Co-fundador / Estrategista de Futebol e Tecnologia</h6>
+        <p>Eu sou o Mayk, jogador de futebol e cabeça por trás da ideia de integrar análise técnica com inteligência artificial. Meu foco na empresa é pensar em como a IA pode facilitar a vida dos atletas e técnicos, e desenvolver as soluções junto com nosso time de devs<p>
+        <img src="img/Mayk.png"class="img-fluid d-flex"
+        height="250px"
+        width="250px"
+        style="margin: 20px 0; display: block">>
+        
+
+
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
