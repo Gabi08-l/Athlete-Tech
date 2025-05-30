@@ -1,120 +1,413 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
-    integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Athlete-Tech | Site</title>
-</head>
-<body style="background: linear-gradient(to bottom, #d3deff, #839dee);"> 
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Athlete-Tech | Site</title>
 
-  <nav class="navbar navbar-expand-lg fixed-top py-3">
-    <div class="container">
-      <a class="navbar-brand text-light" href="#">Athlete-Tech</a>
+<style>
+    body {
+      margin: 0;
+      background-color: #e6f0ff; /* fundo claro azul suave */
+      color: #003366; /* texto azul escuro */
+      font-family: 'Courier New', Courier, monospace;
+    }
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    h2, h4 {
+      color: #0066cc; /* azul forte para títulos */
+      text-shadow: 0 0 5px #80bfff; /* leve brilho */
+    }
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto me-5">
-          <li class="nav-item">
-            <a class="btn nav-link me-2 bg-light rounded-pill" href="#nossa-missao">Nossa Missão</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn nav-link me-2 bg-light rounded-pill" href="#quem-somos">Quem Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn nav-link bg-light rounded-pill" href="#nosso-app">Nosso App</a>
-          </li>
-        </ul>
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .forms {
+      background: linear-gradient(145deg, #d9e6ff, #c2d1ff); /* degradê azul claro */
+      border: 1px solid #99bbff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px #99bbff88;
+      margin-bottom: 50px;
+    }
+
+    .forms input,
+    .forms textarea {
+      width: 100%;
+      background-color: #f0f5ff;
+      border: 1px solid #99bbff;
+      border-radius: 5px;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: #003366;
+      font-family: inherit;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    .forms input:focus,
+    .forms textarea:focus {
+      border-color: #0066cc;
+      outline: none;
+      box-shadow: 0 0 5px #66a3ff;
+    }
+
+    .forms input[type="submit"] {
+      background-color: #0066cc;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px #66a3ff;
+      border: none;
+    }
+
+    .forms input[type="submit"]:hover {
+      background-color: #004999;
+      box-shadow: 0 0 15px #3385ff;
+    }
+
+    footer {
+      background: linear-gradient(to right, #c2d1ff, #99bbff);
+      padding: 40px 20px;
+      border-top: 2px solid #66a3ff88;
+      box-shadow: inset 0 2px 10px #99bbff66;
+      color: #003366;
+    }
+
+    footer .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    footer .footer-block {
+      flex: 1 1 250px;
+    }
+
+    footer p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    footer img {
+      width: 140px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 3px #0066cc);
+    }
+
+    #copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #004080;
+      border-top: 1px solid #66a3ff66;
+      padding-top: 15px;
+    }
+
+    a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-shadow: 0 0 5px #3399ff;
+      color: #0073e6;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-block {
+        text-align: center;
+      }
+    }
+  </style>
+
+
+
+  </head>
+  <body style="background: linear-gradient(to bottom, #d3deff, #839dee)">
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Athlete-Tech</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+          <button
+            class="text-start"
+            style="
+              background-color: antiquewhite;
+              border-radius: 14px;
+              margin-right: 20px;
+              align-items: center;
+            "
+          >
+            Nossa Missão
+          </button>
+          <button
+            class="text-start"
+            style="
+              background-color: antiquewhite;
+              border-radius: 14px;
+              margin-right: 20px;
+              align-items: center;
+            "
+            data-bs-target="#modalAthlete"
+            data-bs-toggle="offcanvas"
+            aria-controls="modalAthlete"
+          >
+            Quem Somos
+          </button>
+          <button
+            class="text-start"
+            style="background-color: antiquewhite; border-radius: 14px"
+          >
+            Nosso App
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container pt-5 mt-3 d-flex align-items-center">
+      <img
+        src="img/atleta-logo.png"
+        alt="Logo Athlete-Tech"
+        class="me-3 w-25 img-fluid"
+      />
+      <h1 class="fs-4 text-dark">A Tecnologia que impulsiona Atletas.</h1>
+    </main>
+
+    <section class="container d-flex flex-wrap align-items-center">
+      <img
+        src="img/Barca.png"
+        alt="Jogador Barça"
+        class="img-fluid rounded-circle me-4 flex-grow-1"
+      />
+      <p id="quem-somos" class="fs-3 flex-grow-2">
+        Na Athlete-Tech, somos apaixonados por esporte, tecnologia e
+        performance. Criamos o Capture Win com o objetivo de transformar a forma
+        como atletas registram, acompanham e evoluem nos seus treinos. Sabemos
+        que cada conquista importa — por isso, queremos dar as ferramentas para
+        que cada movimento seja capturado e cada vitória, celebrada.
+      </p>
+    </section>
+
+    <section
+      id="nossa-missao"
+      class="container d-flex flex-wrap align-items-center my-5"
+    >
+      <img
+        src="img/Bergman.png"
+        alt="Jogador"
+        class="img-fluid w-50"
+        style="margin-right: 250px"
+      />
+      <img src="img/cw_ app.png" alt="LogoCW" class="w-25 img-fluid" />
+      <div class="ms-2 me-5 flex-grow-1">
+        <h1 class="fs-2">Nossa Missão é...</h1>
+        <p class="fs-4">
+          Transformar o modo como atletas se desenvolvem. Com o Capture Win,
+          queremos unir tecnologia e desempenho esportivo, oferecendo
+          ferramentas rápidas, inteligentes e motivadoras que ajudem cada atleta
+          a alcançar seu melhor. Acreditamos que todo progresso merece ser
+          capturado, analisado e celebrado — e estamos aqui pra tornar isso
+          possível, de forma inovadora e inteligente.
+        </p>
+      </div>
+    </section>
+
+    <hr class="my-5" style="height: 200px; background: #333" />
+
+    <section class="d-flex flex-wrap bg-white p-3 gap-3">
+      <img src="img/Luka.png" alt="Luka" class="img-fluid w-100" />
+      <img src="img/GuiS.png" alt="GuiSantos" class="img-fluid w-100" />
+      <img src="img/app.png" alt="App" class="img-fluid w-100" />
+    </section>
+
+    <section class="d-flex flex-wrap bg-secondary-subtle p-3 gap-3 mt-4">
+      <img src="img/Trackingcw.png" alt="AppVolei" class="img-fluid w-100" />
+      <img src="img/Ney.png" alt="Ney" class="img-fluid w-100" />
+      <img src="img/Bruninho.png" alt="atletaBruno" class="img-fluid w-100" />
+    </section>
+
+    <section class="container d-flex justify-content-center mt-4">
+      <img src="img/cw_ app.png" alt="logoApp" class="img-fluid" />
+    </section>
+
+    <section id="nosso-app" class="container d-flex justify-content-end mt-4">
+      <img src="img/dowload.png" alt="logoapp" class="img-fluid" />
+    </section>
+
+    <section class="container d-flex flex-column fs-3 mt-4 gap-2">
+      <p>
+        <i class="bi bi-check2-circle text-success"></i> Monitoramento por
+        Câmeras com IA;
+      </p>
+      <p>
+        <i class="bi bi-check2-circle text-success"></i> Análise de Saúde e
+        Desempenho;
+      </p>
+      <p>
+        <i class="bi bi-check2-circle text-success"></i> Predição de Lesões com
+        Machine Learning;
+      </p>
+      <p>
+        <i class="bi bi-check2-circle text-success"></i> Automação para
+        Treinadores;
+      </p>
+      <p>
+        <i class="bi bi-check2-circle text-success"></i> Estatísticas em tempo
+        real para jogos e treinos;
+      </p>
+      <p>
+        <i class="bi bi-check2-circle text-success"></i> Feedback personalizado
+        com base em desempenho individual;
+      </p>
+    </section>
+
+    <!-- offCanvas -->
+    <div
+      class="offcanvas offcanvas-start text-bg-light"
+      tabindex="-1"
+      id="modalAthlete"
+      aria-labelledby="modalAthlete"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="modalAthlete">Fundadores</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <h1>ERICK</h1>
+        <h6>Fundador, Designer UI/UX e Especialista Front-End</h6>
+        <p>
+          "Salve! Eu sou o Erick, designer e desenvolvedor front-end. Também
+          jogo vôlei nas horas vagas, então sei bem o valor de ter um sistema
+          intuitivo que ajuda no desempenho. Eu cuido do visual do app/site e da
+          experiência do usuário, pra que tudo seja bonito, rápido e funcional!"
+        </p>
+        <img
+          src="./img/vindo_futuro.png"
+          class="img-fluid d-flex"
+          height="530px"
+          width="530px"
+          style="margin: 20px 0; display: block"
+        />
+
+        <h1>GABI</h1>
+        <h6>Co-fundadora / Especialista em Performance Esportiva</h6>
+        <p>
+          Sou a Gabi, jogadora de basquete e apaixonada por performance! Na
+          Athlete-Tech, cuido da parte de análise de rendimento e como a
+          tecnologia pode ajudar atletas a se superarem. Minha vivência nas
+          quadras me ajuda a entender exatamente o que os atletas precisam.
+        </p>
+        <img
+          src="./img/Gabi.png"
+          class="img-fluid d-flex"
+          height="230px"
+          width="230px"
+          style="margin: 20px 0; display: block"
+        />>
+
+        <h1>MAYK</h1>
+        <h6>Co-fundador / Estrategista de Futebol e Tecnologia</h6>
+        <p>
+          Eu sou o Mayk, jogador de futebol e cabeça por trás da ideia de
+          integrar análise técnica com inteligência artificial. Meu foco na
+          empresa é pensar em como a IA pode facilitar a vida dos atletas e
+          técnicos, e desenvolver as soluções junto com nosso time de devs
+        </p>
+        <p>
+          <img
+            src="img/Mayk.png"
+            class="img-fluid d-flex"
+            height="250px"
+            width="250px"
+            style="margin: 20px 0; display: block"
+          />>
+        </p>
       </div>
     </div>
-  </nav>
 
-  <main class="container pt-5 mt-3 d-flex align-items-center">
-    <img src="img/atleta-logo.png" alt="Logo Athlete-Tech" class="me-3 w-25 img-fluid" />
-    <h1 class="fs-4 text-dark">A Tecnologia que impulsiona Atletas.</h1>
-  </main>
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-block">
+          <img src="img/Logopizza1.png" alt="Logo" />
+          <h4>Conheça também:</h4>
+          <p>Explore nossas soluções tecnológicas para atletas e empresas do futuro.</p>
+        </div>
+  
+        <div class="footer-block">
+          <h4>Localização</h4>
+          <p>📍 R. Cap. José Ribeiro, 294<br>Jardim Regina, Jaú - SP</p>
+  
+          <h4>Contato</h4>
+          <p>📞 (14) 4002-8922</p>
+        </div>
+  
+        <div class="footer-block">
+          <h4>Email</h4>
+          <p>📧 email@email.com</p>
+  
+          <h4>Redes Sociais</h4>
+          <p>
+            <a href="#">Instagram</a> | 
+            <a href="#">LinkedIn</a> | 
+            <a href="#">Facebook</a>
+          </p>
+        </div>
+      </div>
+  
+      <div id="copyright">
+        Todos os direitos reservados | &copy; @HBI -
+        <script>document.write(new Date().getFullYear());</script>
+      </div>
+    </footer>
 
-  <section class="container d-flex flex-wrap  align-items-center">
-    <img src="img/Barca.png" alt="Jogador Barça" class="img-fluid rounded-circle me-4 flex-grow-1" />
-    <p id="quem-somos" class="fs-3 flex-grow-2">
-      Na Athlete-Tech, somos apaixonados por esporte, tecnologia e performance. Criamos o Capture Win com o objetivo de
-      transformar a forma como atletas registram, acompanham e evoluem nos seus treinos. Sabemos que cada conquista importa
-      — por isso, queremos dar as ferramentas para que cada movimento seja capturado e cada vitória, celebrada.
-    </p>
-  </section>
-
-  <section id="nossa-missao" class="container d-flex flex-wrap align-items-center my-5">
-    <img src="img/Bergman.png" alt="Jogador" class="img-fluid w-50" style="margin-right: 250px;" />
-    <img src="img/cw_ app.png" alt="LogoCW" class="w-25 img-fluid" />
-    <div class="ms-2  me-5 flex-grow-1">
-      <h1 class="fs-2">Nossa Missão é...</h1>
-      <p class="fs-4">
-        Transformar o modo como atletas se desenvolvem. Com o Capture Win, queremos unir tecnologia e desempenho esportivo,
-        oferecendo ferramentas rápidas, inteligentes e motivadoras que ajudem cada atleta a alcançar seu melhor.
-        Acreditamos que todo progresso merece ser capturado, analisado e celebrado — e estamos aqui pra tornar isso possível,
-        de forma inovadora e inteligente.
-      </p>
-    </div>
-  </section>
-
-  <hr class="my-5" style="height: 200px; background: #333;" />
-
-  <section class=" d-flex flex-wrap bg-white p-3 gap-3">
-    <img src="img/Luka.png" alt="Luka" class="img-fluid w-100" />
-    <img src="img/GuiS.png" alt="GuiSantos" class="img-fluid w-100" />
-    <img src="img/app.png" alt="App" class="img-fluid w-100" />
-  </section>
-
-  <section class="d-flex flex-wrap bg-secondary-subtle p-3 gap-3 mt-4">
-    <img src="img/Trackingcw.png" alt="AppVolei" class="img-fluid w-100" />
-    <img src="img/Ney.png" alt="Ney" class="img-fluid w-100" />
-    <img src="img/Bruninho.png" alt="atletaBruno" class="img-fluid w-100" />
-  </section>
-
-  <section class="container d-flex justify-content-center mt-4">
-    <img src="img/cw_ app.png" alt="logoApp" class=" img-fluid" />
-  </section>
-
-  <section id="nosso-app" class="container d-flex justify-content-end mt-4">
-    <img src="img/dowload.png" alt="logoapp" class="img-fluid" />
-  </section>
-
-  <section class="container d-flex flex-column fs-3 mt-4 gap-2">
-    <p><i class="bi bi-check2-circle text-success"></i> Monitoramento por Câmeras com IA;</p>
-    <p><i class="bi bi-check2-circle text-success"></i> Análise de Saúde e Desempenho;</p>
-    <p><i class="bi bi-check2-circle text-success"></i> Predição de Lesões com Machine Learning;</p>
-    <p><i class="bi bi-check2-circle text-success"></i> Automação para Treinadores;</p>
-    <p><i class="bi bi-check2-circle text-success"></i> Estatísticas em tempo real para jogos e treinos;</p>
-    <p><i class="bi bi-check2-circle text-success"></i> Feedback personalizado com base em desempenho individual;</p>
-  </section>
-
-
-
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
-    integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>
