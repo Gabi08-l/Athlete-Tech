@@ -22,187 +22,45 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Athlete-Tech | Site</title>
 
-<style>
-    body {
-      margin: 0;
-      background-color: #e6f0ff; /* fundo claro azul suave */
-      color: #003366; /* texto azul escuro */
-      font-family: 'Courier New', Courier, monospace;
-    }
-
-    h2, h4 {
-      color: #0066cc; /* azul forte para títulos */
-      text-shadow: 0 0 5px #80bfff; /* leve brilho */
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .forms {
-      background: linear-gradient(145deg, #d9e6ff, #c2d1ff); /* degradê azul claro */
-      border: 1px solid #99bbff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 0 15px #99bbff88;
-      margin-bottom: 50px;
-    }
-
-    .forms input,
-    .forms textarea {
-      width: 100%;
-      background-color: #f0f5ff;
-      border: 1px solid #99bbff;
-      border-radius: 5px;
-      padding: 12px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      color: #003366;
-      font-family: inherit;
-      font-size: 14px;
-      transition: border-color 0.3s;
-    }
-    .forms input:focus,
-    .forms textarea:focus {
-      border-color: #0066cc;
-      outline: none;
-      box-shadow: 0 0 5px #66a3ff;
-    }
-
-    .forms input[type="submit"] {
-      background-color: #0066cc;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s, box-shadow 0.3s;
-      box-shadow: 0 0 10px #66a3ff;
-      border: none;
-    }
-
-    .forms input[type="submit"]:hover {
-      background-color: #004999;
-      box-shadow: 0 0 15px #3385ff;
-    }
-
-    footer {
-      background: linear-gradient(to right, #c2d1ff, #99bbff);
-      padding: 40px 20px;
-      border-top: 2px solid #66a3ff88;
-      box-shadow: inset 0 2px 10px #99bbff66;
-      color: #003366;
-    }
-
-    footer .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: space-between;
-    }
-
-    footer .footer-block {
-      flex: 1 1 250px;
-    }
-
-    footer p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    footer img {
-      width: 140px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 0 3px #0066cc);
-    }
-
-    #copyright {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 13px;
-      color: #004080;
-      border-top: 1px solid #66a3ff66;
-      padding-top: 15px;
-    }
-
-    a {
-      color: #004080;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-shadow: 0 0 5px #3399ff;
-      color: #0073e6;
-    }
-
-    @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .footer-block {
-        text-align: center;
-      }
-    }
-  </style>
-
-
 
   </head>
   <body style="background: linear-gradient(to bottom, #d3deff, #839dee)">
-    <nav class="navbar navbar-expand-lg bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Athlete-Tech</a>
+
+    <nav class="navbar navbar-expand-lg  shadow-sm fixed-top">
+      <div class="container py-2">
+        <a class="navbar-brand fw-bold fs-4" href="#">Athlete-Tech</a>
+        
         <button
-          class="navbar-toggler"
+          class="navbar-toggler d-lg-none"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="container">
-          <button
-            class="text-start"
-            style="
-              background-color: antiquewhite;
-              border-radius: 14px;
-              margin-right: 20px;
-              align-items: center;
-            "
-          >
-            Nossa Missão
-          </button>
-          <button
-            class="text-start"
-            style="
-              background-color: antiquewhite;
-              border-radius: 14px;
-              margin-right: 20px;
-              align-items: center;
-            "
-            data-bs-target="#modalAthlete"
-            data-bs-toggle="offcanvas"
-            aria-controls="modalAthlete"
-          >
-            Quem Somos
-          </button>
-          <button
-            class="text-start"
-            style="background-color: antiquewhite; border-radius: 14px"
-          >
-            Nosso App
-          </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a class="nav-link " href="#nossa-missao">Nossa Missão</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#quem-somos">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#nosso-app">Nosso App</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
+    
 
-    <main class="container pt-5 mt-3 d-flex align-items-center">
+
+    <main class="container pt-2 mt-5 d-flex align-items-center">
       <img
         src="img/atleta-logo.png"
         alt="Logo Athlete-Tech"
@@ -265,11 +123,11 @@
     </section>
 
     <section class="container d-flex justify-content-center mt-4">
-      <img src="img/cw_ app.png" alt="logoApp" class="img-fluid" />
+      <img src="img/cw_ app.png" alt="logoApp" class="img-fluid w-100" />
     </section>
 
     <section id="nosso-app" class="container d-flex justify-content-end mt-4">
-      <img src="img/dowload.png" alt="logoapp" class="img-fluid" />
+      <img src="img/dowload.png" alt="logoapp" class="img-fluid " />
     </section>
 
     <section class="container d-flex flex-column fs-3 mt-4 gap-2">
@@ -299,9 +157,9 @@
       </p>
     </section>
 
-    <!-- offCanvas -->
+   
     <div
-      class="offcanvas offcanvas-start text-bg-light"
+      class="offcanvas offcanvas-start text-"
       tabindex="-1"
       id="modalAthlete"
       aria-labelledby="modalAthlete"
@@ -345,7 +203,7 @@
           class="img-fluid d-flex"
           height="230px"
           width="230px"
-          style="margin: 20px 0; display: block"
+          style="margin: 20px 0; display: block; margin-left: 135px;"
         />>
 
         <h1>MAYK</h1>
@@ -371,34 +229,34 @@
     <footer>
       <div class="container footer-content">
         <div class="footer-block">
-          <img src="img/Logopizza1.png" alt="Logo" />
-          <h4>Conheça também:</h4>
+          <img src="img/atleta-logo.png" alt="Logo" height="160px" width="160px"  />
+          <h3>Conheça também:</h3>
           <p>Explore nossas soluções tecnológicas para atletas e empresas do futuro.</p>
         </div>
   
         <div class="footer-block">
-          <h4>Localização</h4>
+          <h2>Localização</h2>
           <p>📍 R. Cap. José Ribeiro, 294<br>Jardim Regina, Jaú - SP</p>
   
-          <h4>Contato</h4>
+          <h2>Contato</h2>
           <p>📞 (14) 4002-8922</p>
         </div>
   
         <div class="footer-block">
-          <h4>Email</h4>
-          <p>📧 email@email.com</p>
+          <h2>Email</h2>
+          <p>📧 Athlete-Tech@gmail.com</p>
   
-          <h4>Redes Sociais</h4>
+          <h2>Redes Sociais</h2>
           <p>
             <a href="#">Instagram</a> | 
             <a href="#">LinkedIn</a> | 
-            <a href="#">Facebook</a>
+            
           </p>
         </div>
       </div>
   
       <div id="copyright">
-        Todos os direitos reservados | &copy; @HBI -
+        Todos os direitos reservados | &copy; @Athlete-Tech -
         <script>document.write(new Date().getFullYear());</script>
       </div>
     </footer>

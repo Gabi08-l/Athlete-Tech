@@ -10,58 +10,69 @@
 
 body {
     background-color: #B6C5F2;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
     scroll-behavior: smooth;
   }
-  
-  /* Navbar */
+
   .navbar {
-    background-color:#003366;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    position: fixed;
+    background-color: #003366; 
+    height: 80px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem; 
   }
   
   .navbar-brand {
     color: #fff;
     font-weight: bold;
-    font-size: 1.5rem;
+    font: size 15px;;
   }
   
   .nav-link {
-    margin-right: 0.5rem;
+      padding: 10px 15px;
+      margin: 5px 0;
+    
+    background-color:#DDDDF0;
+     
     background-color: C4CDE8;
-    border-radius: 999px;
-    padding: 0.5rem 1rem;
-    font-family: "inter", sans-serif;
-  ;
+    border-radius: 14px;
+ 
+    font-family: "jocker", sans-serif;
+  
   }
   
-  .nav-link:hover {
-    background-color: #f0f0f0;
+  
+  .custom-btn:hover {
+    background-color: #B6C5F2;
   }
   
-  /* Logo e slogan */
-  .container.pt-2.mt-2 img {
+ 
+
+
+  
+  .container.pt-2.mt-5 img {
     width: 225px;
     height: auto;
     margin-right: 1rem;
   }
   
-  .container.pt-2.mt-2 h1 {
-    font-size: 2.0rem;
+  .container.pt-2.mt-5 h1 {
+    font-size: 34px;
     color: #000;
     font-weight: 600;
   }
   
-  /* Quem somos */
+  
   #quem-somos {
-    font-size: rem;
+    font-size: 3rem;
     line-height: 1.6;
     font-family: "jocker", sans-serif;
     text-shadow: #000;
   }
   
-  /* Nossa missão */
+ 
   #nossa-missao img {
     max-width: 100%;
     height: auto;
@@ -103,14 +114,11 @@ body {
   }
   
   .container.mt-4 img[alt="logoApp"] {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 700px;
   }
   
-  .container.mt-4 img[alt="logoapp"] {
-    max-width: 100%;
-    height: auto;
-  }
+
   
  
   .container.d-flex.flex-column.fs-3 p {
@@ -121,4 +129,89 @@ body {
   }
 
 
+  
+    body {
+      margin: 0;
+      background-color: #e6f0ff;
+      color: #003366;
+      font-family: 'jocker', sans-serif;
+    }
+
+    h2, h4 {
+      color: #000000; 
+      text-shadow: 0 0 5px #80bfff; 
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+
+    footer {
+      background: linear-gradient(to right, #c2d1ff, #99bbff);
+      padding: 40px 20px;
+      border-top: 2px solid #66a3ff88;
+      box-shadow: inset 0 2px 10px #99bbff66;
+      color: #003366;
+    }
+
+    footer .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    footer .footer-block {
+      flex: 1 1 250px;
+    }
+
+    footer p {
+      font-family: 'jocker', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer img {
+      width: 140px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 3px #0066cc);
+    }
+
+    #copyright {
+      font-family:'jocker', sans-serif;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+      color: #000000;
+      padding-top: 15px;
+    }
+
+    a {
+      font-family: 'jocker', sans-serif;
+      font-size: 20px;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      font-family: 'jocker', sans-serif;
+      text-shadow: 0 0 5px #000000;
+      color: #0073e6;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-block {
+        text-align: center;
+      }
+    }
   
