@@ -23,7 +23,7 @@
     <title>Athlete-Tech | Site</title>
   </head>
   <body style="background: linear-gradient(to bottom, #d3deff, #839dee)">
-    <nav class="bg-primary">
+    <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Athlete-Tech</a>
         <button
@@ -37,38 +37,23 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="container">
-          <button
-            class="text-start"
-            style="
-              background-color: antiquewhite;
-              border-radius: 14px;
-              margin-right: 20px;
-              align-items: center;
-            "
-          >
-            Nossa Missão
-          </button>
-          <button
-            class="text-start"
-            style="
-              background-color: antiquewhite;
-              border-radius: 14px;
-              margin-right: 20px;
-              align-items: center;
-            "
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#nossa-missao">Nossa Missão</a>
+
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#quem-somos"
             data-bs-target="#modalAthlete"
             data-bs-toggle="offcanvas"
             aria-controls="modalAthlete"
-          >
-            Quem Somos
-          </button>
-          <button
-            class="text-start"
-            style="background-color: antiquewhite; border-radius: 14px"
-          >
-            Nosso App
-          </button>
+            > Quem Somos</a>  
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#nosso-app">Nosso App</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -88,7 +73,7 @@
         alt="Jogador Barça"
         class="img-fluid rounded-circle me-4 flex-grow-1"
       />
-      <p id="quem-somos" class="fs-3 flex-grow-2">
+      <p id="Athlete-Tech" class="fs-3 flex-grow-2">
         Na Athlete-Tech, somos apaixonados por esporte, tecnologia e
         performance. Criamos o Capture Win com o objetivo de transformar a forma
         como atletas registram, acompanham e evoluem nos seus treinos. Sabemos
@@ -170,7 +155,7 @@
       </p>
     </section>
 
-    <!-- offCanvas -->
+    
     <div
       class="offcanvas offcanvas-start text-bg-light"
       tabindex="-1"
