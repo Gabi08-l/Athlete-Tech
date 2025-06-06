@@ -21,46 +21,59 @@
 
     <link rel="stylesheet" href="./css/style.css" />
     <title>Athlete-Tech | Site</title>
-
-
   </head>
   <body style="background: linear-gradient(to bottom, #d3deff, #839dee)">
-
-    <nav class="navbar navbar-expand-lg  shadow-sm fixed-top">
-      <div class="container py-2">
-        <a class="navbar-brand fw-bold fs-4" href="#">Athlete-Tech</a>
-        
+    <nav class="bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Athlete-Tech</a>
         <button
-          class="navbar-toggler d-lg-none"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav gap-3">
-            <li class="nav-item">
-              <a class="nav-link " href="#nossa-missao">Nossa Missão</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#quem-somos">Quem Somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#nosso-app">Nosso App</a>
-            </li>
-          </ul>
+        <div class="container">
+          <button
+            class="text-start"
+            style="
+              background-color: antiquewhite;
+              border-radius: 14px;
+              margin-right: 20px;
+              align-items: center;
+            "
+          >
+            Nossa Missão
+          </button>
+          <button
+            class="text-start"
+            style="
+              background-color: antiquewhite;
+              border-radius: 14px;
+              margin-right: 20px;
+              align-items: center;
+            "
+            data-bs-target="#modalAthlete"
+            data-bs-toggle="offcanvas"
+            aria-controls="modalAthlete"
+          >
+            Quem Somos
+          </button>
+          <button
+            class="text-start"
+            style="background-color: antiquewhite; border-radius: 14px"
+          >
+            Nosso App
+          </button>
         </div>
       </div>
     </nav>
-    
 
-
-    <main class="container pt-2 mt-5 d-flex align-items-center">
+    <main class="container pt-5 mt-3 d-flex align-items-center">
       <img
         src="img/atleta-logo.png"
         alt="Logo Athlete-Tech"
@@ -122,12 +135,12 @@
       <img src="img/Bruninho.png" alt="atletaBruno" class="img-fluid w-100" />
     </section>
 
-    <section class="container d-flex justify-content-center mt-4">
-      <img src="img/cw_ app.png" alt="logoApp" class="img-fluid w-100" />
+    <section class="container d-flex justify-content-center mt-8">
+      <img src="img/cw_ app.png" alt="logoApp" class="img-fluid" />
     </section>
 
     <section id="nosso-app" class="container d-flex justify-content-end mt-4">
-      <img src="img/dowload.png" alt="logoapp" class="img-fluid " />
+      <img src="img/dowload.png" alt="logoapp" class="img-fluid" />
     </section>
 
     <section class="container d-flex flex-column fs-3 mt-4 gap-2">
@@ -157,9 +170,9 @@
       </p>
     </section>
 
-   
+    <!-- offCanvas -->
     <div
-      class="offcanvas offcanvas-start text-"
+      class="offcanvas offcanvas-start text-bg-light"
       tabindex="-1"
       id="modalAthlete"
       aria-labelledby="modalAthlete"
@@ -203,7 +216,7 @@
           class="img-fluid d-flex"
           height="230px"
           width="230px"
-          style="margin: 20px 0; display: block; margin-left: 135px;"
+          style="margin: 20px 0; display: block"
         />>
 
         <h1>MAYK</h1>
@@ -229,35 +242,41 @@
     <footer>
       <div class="container footer-content">
         <div class="footer-block">
-          <img src="img/atleta-logo.png" alt="Logo" height="160px" width="160px"  />
+          <img
+            src="img/atleta-logo.png"
+            alt="Logo"
+            height="160px"
+            width="160px"
+          />
           <h3>Conheça também:</h3>
-          <p>Explore nossas soluções tecnológicas para atletas e empresas do futuro.</p>
+          <p>
+            Explore nossas soluções tecnológicas para atletas e empresas do
+            futuro.
+          </p>
         </div>
-  
+
         <div class="footer-block">
           <h2>Localização</h2>
-          <p>📍 R. Cap. José Ribeiro, 294<br>Jardim Regina, Jaú - SP</p>
-  
+          <p>📍 R. Cap. José Ribeiro, 294<br />Jardim Regina, Jaú - SP</p>
+
           <h2>Contato</h2>
           <p>📞 (14) 4002-8922</p>
         </div>
-  
+
         <div class="footer-block">
           <h2>Email</h2>
           <p>📧 Athlete-Tech@gmail.com</p>
-  
+
           <h2>Redes Sociais</h2>
-          <p>
-            <a href="#">Instagram</a> | 
-            <a href="#">LinkedIn</a> | 
-            
-          </p>
+          <p><a href="#">Instagram</a> | <a href="#">LinkedIn</a> |</p>
         </div>
       </div>
-  
+
       <div id="copyright">
         Todos os direitos reservados | &copy; @Athlete-Tech -
-        <script>document.write(new Date().getFullYear());</script>
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
       </div>
     </footer>
 
